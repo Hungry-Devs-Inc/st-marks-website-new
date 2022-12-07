@@ -1,6 +1,11 @@
+
+import Hero from "./Views/Hero";
+
 function App() {
   return (
-    <h1>website</h1>
+    <>
+      <Hero />
+    </>
   );
 }
 
