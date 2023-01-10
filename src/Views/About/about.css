@@ -1,0 +1,38 @@
+.hero-header {
+    background-image: url(./images/st-marks-parish.jpeg);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position-x: center;
+    height: 300px;
+}
+ul {
+    padding:0;
+    margin: 0;
+}
+.clergy-member:hover {
+    margin-bottom:50px;
+    align-items: center;
+    border: 3px solid whitesmoke;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px black;
+    transition: 0.5s all ease-in-out;
+}
+
+.clergy-member img {
+    border-radius: 15px;
+    width: 225px;
+    height: 225px;
+}
+
+
+.left-column, .right-column {
+    padding: 15px;
+}
+
+.left-column  {
+    min-width: 230px;
+    max-width: 350px;
+    text-align:center;
+    padding:0;
+}
