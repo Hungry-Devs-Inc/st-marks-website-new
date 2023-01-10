@@ -1,6 +1,10 @@
+import { About, Clergy, Contact } from './Views'
+
 function App() {
   return (
-    <h1>website</h1>
+    <div className="container-fluid">
+      <Contact></Contact>
+    </div>
   );
 }
 

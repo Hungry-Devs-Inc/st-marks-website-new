@@ -1,3 +1,6 @@
+import parish from '../images/parish-outside.jpeg';
+import '../about.css';
+
 export const About = () => {
     return (
         <>
@@ -16,7 +19,7 @@ export const About = () => {
             We can also add information about the initial Father, Father Michael and how long he was the father. Then we can add information about Father George,
             who recently took over the Parish.
            </p>
-           <img src="" className="parish-image" alt="inside the parish"></img>
+           <img src={parish} className="parish-image img-fluid" alt="inside the parish"></img>
         </div>
         </>
     )
