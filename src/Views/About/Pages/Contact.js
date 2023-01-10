@@ -29,7 +29,7 @@ export const Contact = () => {
             <div className="row justify-content-center text-center">
                 <div className="col-lg-4 col-md-4 col-sm-12">
                     <h2>Visit us</h2>
-                    <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" title="gmap_canvas" src="https://maps.google.com/maps?q=17840%20Sky%20Park%20Circle%20Irvine,%20CA%2092614&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
+                    <div className="mapouter"><div className="gmap_canvas"><iframe width="600" height="500" title="gmap_canvas" src="https://maps.google.com/maps?q=17840%20Sky%20Park%20Circle%20Irvine,%20CA%2092614&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowFullScreen="true" marginheight="0" marginwidth="0"></iframe></div></div>
                 </div>
             </div>
         </>
