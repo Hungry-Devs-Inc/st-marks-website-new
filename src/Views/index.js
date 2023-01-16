@@ -1,0 +1,1 @@
+export { About, Clergy, Contact } from './About';

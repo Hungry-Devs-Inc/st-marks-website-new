@@ -1,11 +1,12 @@
 
 import Hero from "./Views/Hero";
+import { About, Clergy, Contact } from './Views'
 
 function App() {
   return (
-    <>
-      <Hero />
-    </>
+    <div className="container-fluid">
+    <Hero>
+    </div>
   );
 }
 
