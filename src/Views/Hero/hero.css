@@ -1,11 +1,11 @@
 .myHero {
-    /* background-color: red; /
+   background-color: red; 
     background-image: url("../../assets/cropped-IMG_0082-scaled-1.jpeg");
     height: 80vh;
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
-    / background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;

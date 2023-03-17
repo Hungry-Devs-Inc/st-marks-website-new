@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Hero.css";
+import "./hero.css";
 
 const Hero = () => {
   return (

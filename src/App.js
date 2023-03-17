@@ -1,11 +1,9 @@
-
-import Hero from "./Views/Hero";
-import { About, Clergy, Contact } from './Views'
+import { About, Clergy, Contact, Hero } from './Views';
 
 function App() {
   return (
     <div className="container-fluid">
-    <Hero>
+    <Hero />
     </div>
   );
 }
