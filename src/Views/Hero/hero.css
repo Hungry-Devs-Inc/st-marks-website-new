@@ -1,0 +1,30 @@
+.myHero {
+   background-color: red; 
+    background-image: url("../../assets/cropped-IMG_0082-scaled-1.jpeg");
+    height: 80vh;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .welcome {
+    margin-top: 35vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .stMark {
+    margin-top: 5vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+  }
+  
+  .outline {
+    outline: red 1px solid;
+  }

@@ -1,9 +1,9 @@
-import { About, Clergy, Contact } from './Views'
+import { About, Clergy, Contact, Hero } from './Views';
 
 function App() {
   return (
-    <div className="container">
-      <Clergy></Clergy>
+    <div className="container-fluid">
+    <Hero />
     </div>
   );
 }
