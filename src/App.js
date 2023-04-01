@@ -1,6 +1,6 @@
 import { About, Clergy, Contact } from './Views';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
+import logo from './assets/logo-1.png'
 import './globals.css';
 
 function App() {
@@ -8,15 +8,15 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <nav className="navbar bg-success py-4 fixed-top">
+        <nav className="navbar bg-success py-2 fixed-top">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">St. Marks Orthodox Church</Link>
+            <Link className="navbar-brand church-logo" to="/"><img src={logo} alt="church logo" /></Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="offcanvas offcanvas-end bg-success" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <div className="offcanvas-header">
-                <h5 className="offcanvas-title" id="offcanvasNavbarLabel">St. Mark's Orthodox Church</h5>
+                <h5 className="offcanvas-title" id="offcanvasNavbarLabel">St. Mark Orthodox Church</h5>
                 <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div className="offcanvas-body">

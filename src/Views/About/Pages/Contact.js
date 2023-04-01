@@ -3,8 +3,10 @@ import { default as Hero } from '../../Hero';
 
 export const Contact = () => {
     return (
-        <div className="bg-light bg-gradient">
-            <Hero pageState={"Contact"}/>
+        <>
+        <Hero pageState={"Contact"}/>
+        <div className="container bg-light bg-gradient">
+            <div className="container-fluid">
             <div className="row gap-3 justify-content-center pt-5">
                 <div className="col-lg-3 col-md-4 col-sm-12 card">
                     <h4 className="card-header">Telephone</h4>
@@ -19,6 +21,7 @@ export const Contact = () => {
                 <div className="col-lg-3 col-md-4 col-sm-12 card">
                     <h4 className="card-header">Email</h4>
                     <a href="mailto:FrGeorgeKatrib@gmail.com" className="card-body">FrGeorgeKatrib@gmail.com</a>
+                </div>
                 </div>
             </div>
             <br></br>
@@ -35,5 +38,6 @@ export const Contact = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }

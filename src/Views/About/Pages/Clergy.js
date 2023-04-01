@@ -6,7 +6,7 @@ export const Clergy = () => {
     return (
         <>
             <Hero pageState={"Clergy"} />
-            <ul className="bg-light bg-gradient">
+            <ul className="container-fluid bg-light bg-gradient">
                 {clergy.members.map((member, index) => {
                     return (
                         <li key={index} className="row clergy-member ">
