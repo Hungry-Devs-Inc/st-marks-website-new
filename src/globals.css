@@ -2,7 +2,7 @@
     font-family: American Typewriter;
 }
 .bg-success {
-    background-color: #2E8B57 !important;
+    background-color: #FFF8DC !important;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,.5);
   }
   .nav-link {
@@ -11,6 +11,6 @@
 
   .nav-link:hover {
     background-color: #3CB371;
-    transition: 2s all ease;
+    transition: 1s all ease;
     align-items:center;
   }
