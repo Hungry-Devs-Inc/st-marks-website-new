@@ -1,8 +1,10 @@
 import '../about.css';
+import { default as Hero } from '../../Hero';
 
 export const Contact = () => {
     return (
         <div className="bg-light bg-gradient">
+            <Hero pageState={"Contact"}/>
             <div className="row gap-3 justify-content-center pt-5">
                 <div className="col-lg-3 col-md-4 col-sm-12 card">
                     <h4 className="card-header">Telephone</h4>

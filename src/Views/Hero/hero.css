@@ -1,7 +1,7 @@
 .myHero {
    background-color: red; 
     background-image: url("../../assets/cropped-IMG_0082-scaled-1.jpeg");
-    height: 80vh;
+    height: 45vh;
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
@@ -27,4 +27,13 @@
   
   .outline {
     outline: red 1px solid;
+  }
+
+  .page-name {
+    position: absolute;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: -1.5em;
+    color: white;
+    padding-left: 10px;
   }
