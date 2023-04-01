@@ -1,12 +1,11 @@
 import parish from '../images/parish-outside.jpeg';
 import '../about.css';
+import { default as Hero } from '../../Hero';
 
 export const About = () => {
     return (
         <>
-        <div className="hero-header">
-        <h1 className="page-title">About</h1>
-        </div>
+        <Hero pageState={"About"}/>
         <div className="container">
            <p>Saint Mark Orthodox Christian Church is a parish of the Diocese of Los Angeles, and the West of the <a href="https://www.antiochian.org/home" target="_blank" rel="noreferrer">Antiochian Orthodox Christian Archdiocese of North America</a>.</p> 
            <p>In 1994, the 200th anniversary of the Orthodox Christian presence in North America was celebrated. While Orthodoxy entered through Alaska with the Russian mission there in 1794, Orthodox people with roots in Greece, the Balkans, Africa, and the Middle East have since added to the diversity of our continent.</p>
