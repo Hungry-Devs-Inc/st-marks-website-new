@@ -52,7 +52,7 @@ export const Home = () => {
             <Hero pageState={"Home"} />
             <h1 className="date">{currentDate}</h1>
             <p>Home Page</p>
-            <div className="container-fluid row">
+            <div className="container-fluid row bg-light bg-gradient">
             <div className="col-sm-12 col-md-6">
                 <img className="img-fluid" src="https://i.swncdn.com/media/630w/cms/CW/faith/31429-speaking-in-front-of-crowd-1200.webp" alt="Congregation"/>
             </div>
@@ -64,10 +64,10 @@ export const Home = () => {
                     <>
                     {m.data.map(data => {
                         return (
-                            <div className="card">
-                                <h3>{data.Day} {data.Date}</h3>
+                            <div className="card border-0 mb-2">
+                                <h5>{data.Day} {data.Date}</h5>
                                 <h4>{data.TimeStart} - {data.TimeEnd}</h4>
-                                <h5>{data.Title}</h5>
+                                <h3>{data.Title}</h3>
                             </div>
                         )
                     })}

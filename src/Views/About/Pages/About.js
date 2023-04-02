@@ -6,7 +6,7 @@ export const About = () => {
     return (
         <>
         <Hero pageState={"About"}/>
-        <div className="container">
+        <div className="container bg-light bg-gradient">
            <p>Saint Mark Orthodox Christian Church is a parish of the Diocese of Los Angeles, and the West of the <a href="https://www.antiochian.org/home" target="_blank" rel="noreferrer">Antiochian Orthodox Christian Archdiocese of North America</a>.</p> 
            <p>In 1994, the 200th anniversary of the Orthodox Christian presence in North America was celebrated. While Orthodoxy entered through Alaska with the Russian mission there in 1794, Orthodox people with roots in Greece, the Balkans, Africa, and the Middle East have since added to the diversity of our continent.</p>
            <p>Immigrants from Syria and the Middle East began to organize Churches in 1895, and thereby the two thousand years of spiritual experience of the Antiochian Patriarchate has enriched the New World for more than one hundred years.</p>
