@@ -1,4 +1,4 @@
-import { About, Clergy, Contact } from './Views';
+import { About, Clergy, Contact, Home } from './Views';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import logo from './assets/logo-1.png'
 import './globals.css';
@@ -14,7 +14,7 @@ function App() {
             <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="offcanvas offcanvas-end bg-success" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div className="offcanvas offcanvas-end bg-success" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <div className="offcanvas-header">
                 <h5 className="offcanvas-title" id="offcanvasNavbarLabel">St. Mark Orthodox Church</h5>
                 <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -51,7 +51,7 @@ function App() {
           </div>
         </nav>
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/about/clergy" element={<Clergy />} />
           <Route path="/contact" element={<Contact />} />

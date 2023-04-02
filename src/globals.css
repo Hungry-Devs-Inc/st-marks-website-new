@@ -5,6 +5,7 @@
     height: 75px;
 }
 .bg-success {
+  opacity: .9;
     background-color: #FFF8DC !important;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,.5);
   }
@@ -16,4 +17,79 @@
     background-color: #3CB371;
     transition: 1s all ease;
     align-items:center;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  @-moz-keyframes slideIn {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  @-webkit-keyframes slideIn {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  @-o-keyframes slideIn {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  @-ms-keyframes slideIn {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(100%);
+    }
+  }
+  // fade in animation //
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
