@@ -48,11 +48,13 @@
     }
   }
 
-.home-body-image {
+.home-image {
     border: 5px solid #F2C649;
     border-radius: 15px;
+    max-height: 650px !important;
+    padding-bottom: 25px;
 }
 
-.home-body-image-animation {
+.home-image-animation {
     animation: slideIn 2s ease;
 }

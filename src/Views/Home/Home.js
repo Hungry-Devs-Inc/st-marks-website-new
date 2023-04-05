@@ -1,6 +1,8 @@
 import { default as Hero } from "../Hero";
 import { useState, useEffect } from 'react';
-import "./home.css"
+import "./home.css";
+import saintPatron from "../../assets/Subject.png";
+
 export const Home = () => {
     const [currentDate, setCurrentDate] = useState(new Date().toLocaleDateString());
     const [currentData, setCurrentData] = useState([]);
@@ -50,15 +52,14 @@ export const Home = () => {
     return (
         <>
             <Hero pageState={"Home"} />
-            <div className="bg-light">
-                <h1 className="date">{currentDate}</h1>
+            <div className="bg-light top-container">
                 <div className="container-fluid row bg-light bg-gradient">
                     <div className="col-sm-12 col-md-6">
-                        <img className="img-fluid" src="https://i.swncdn.com/media/630w/cms/CW/faith/31429-speaking-in-front-of-crowd-1200.webp" alt="Congregation" />
+                        <img className="img-fluid home-image" src={saintPatron} alt="saint holding baby" />
                     </div>
                     <div className="col-sm-12 col-md-6">
-                        <h3 className="d-none d-md-block">Services</h3>
-                        <h3>This Week at St. Mark</h3>
+                        <h3 className="d-none d-md-block text-center">Services</h3>
+                        <h3 className="text-center">This Week at St. Mark</h3>
                         {dummyData.map(m => {
                             return (
                                 <>
@@ -68,10 +69,10 @@ export const Home = () => {
                                                 <li className="list-group-item d-flex justify-content-between align-items-start"
                                                 key={data.Title}>
                                                     <div className="ms-2 me-auto">
-                                                        <div class="fw-bold">{data.Title}</div>
-                                                        {data.Day} ( {data.TimeStart} - {data.TimeEnd} )
+                                                        <div className="fw-bold">{data.Title}</div>
+                                                        {data.Date} ( {data.TimeStart} - {data.TimeEnd} )
                                                     </div>
-                                                    <span className="badge bg-primary rounded-pill">{data.Date}</span>
+                                                    <span className="badge bg-primary rounded-pill">{data.Day}</span>
                                                 </li>
                                             </ul>
                                         )
