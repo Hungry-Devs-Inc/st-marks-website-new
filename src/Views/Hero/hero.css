@@ -1,7 +1,93 @@
+@keyframes slideIn {
+  from {
+    transform: translateX(-250%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes slideIn {
+  from {
+    transform: translateX(-250%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes slideIn {
+  from {
+    transform: translateX(-250%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+@-o-keyframes slideIn {
+  from {
+    transform: translateX(-250%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+@-ms-keyframes slideIn {
+  from {
+    transform: translateX(-250%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes zoomHero {
+  from {
+    background-size: 200%;
+  }
+  to {
+    background-size: 100%; 
+  }
+}
+@-moz-keyframes zoomHero {
+  from {
+    background-size: 200%;
+  }
+  to {
+    background-size: 100%; 
+  }
+}
+@-webkit-keyframes zoomHero {
+  from {
+    background-size: 200%;
+  }
+  to {
+    background-size: 100%; 
+  }
+}
+@-o-keyframes zoomhero {
+  from {
+    background-size: 200%;
+  }
+  to {
+    background-size: 100%; 
+  }
+}
+@-ms-keyframes zoomHero {
+  from {
+    background-size: 200%;
+  }
+  to {
+    background-size: 100%; 
+  }
+}
+
 .myHero {
-   background-color: red; 
-    background-image: url("../../assets/cropped-IMG_0082-scaled-1.jpeg");
-    height: 45vh;
+    background-image: url('/Users/clm/src/personal/st-marks-website-new/src/assets/parish-outside.jpeg');
+    height: 100vh;
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
@@ -23,6 +109,8 @@
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;
+    font-size: 75px;
+    animation: slideIn 2s ease;
   }
   
   .outline {
@@ -36,4 +124,10 @@
     margin-top: -1.5em;
     color: white;
     padding-left: 10px;
+  }
+
+  @media only screen and (min-width:1020px) {
+    .myHero {
+      animation: zoomHero 2s ease;
+    }
   }

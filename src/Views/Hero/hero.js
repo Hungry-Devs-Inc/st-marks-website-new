@@ -1,9 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./hero.css";
-import { useParams } from 'react-router-dom';
+
 const Hero = ({pageState}) => {
-  console.log(useParams());
   return (
     <>
       <div className="myHero text-white">

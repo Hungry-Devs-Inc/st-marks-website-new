@@ -1,4 +1,4 @@
-import parish from '../images/parish-outside.jpeg';
+import parish from '../../../assets/parish-outside.jpeg';
 import '../about.css';
 import { default as Hero } from '../../Hero';
 
