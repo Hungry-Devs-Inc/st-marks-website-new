@@ -1,128 +1,92 @@
-@keyframes scale-in {
-  0% {
-    background-size:200%;
-  }
-  100% {
-    background-size: 100%;
-  }
-}
-@-moz-keyframes scale-in {
-  0% { 
-    background-size:200%;
-   }
-  100% { 
-    background-size:100%;
-  }
-}
-
-@-webkit-keyframes scale-in {
-  0% { 
-    background-size:200%;
-   }
-  100% { 
-    background-size:100%;
-  }
-}
-
-@-o-keyframes scale-in {
-  0% { 
-    background-size:200%;
-   }
-  100% { 
-    background-size:100%;
-  }
-}
-
-@-ms-keyframes scale-in {
-  0% { 
-    background-size:200%;
-   }
-  100% { 
-    background-size:100%;
-  }
-}
-
 @keyframes slideIn {
-  0% {
-    transform: translateX(-150%);
+  from {
+    transform: translateX(-250%);
   }
 
-  100% {
-    transform: translateX(0%);
+  to {
+    transform: translateX(0);
   }
 }
-
 @-moz-keyframes slideIn {
   from {
-    transform: translateX(-150%);
+    transform: translateX(-250%);
   }
 
   to {
     transform: translateX(0%);
   }
 }
-
 @-webkit-keyframes slideIn {
   from {
-    transform: translateX(-150%);
+    transform: translateX(-250%);
   }
 
   to {
     transform: translateX(0%);
   }
 }
-
 @-o-keyframes slideIn {
   from {
-    transform: translateX(-150%);
+    transform: translateX(-250%);
   }
 
   to {
     transform: translateX(0%);
   }
 }
-
 @-ms-keyframes slideIn {
   from {
-    transform: translateX(-150%);
+    transform: translateX(-250%);
   }
 
   to {
     transform: translateX(0%);
   }
 }
-// fade in animation //
-@keyframes fadeIn {
+
+@keyframes zoomHero {
   from {
-     opacity: 0;
+    background-size: 200%;
   }
   to {
-     opacity: 1;
-    }
+    background-size: 100%; 
+  }
 }
-
-@-moz-keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@-moz-keyframes zoomHero {
+  from {
+    background-size: 200%;
+  }
+  to {
+    background-size: 100%; 
+  }
 }
-
-@-webkit-keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@-webkit-keyframes zoomHero {
+  from {
+    background-size: 200%;
+  }
+  to {
+    background-size: 100%; 
+  }
 }
-
-@-o-keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@-o-keyframes zoomhero {
+  from {
+    background-size: 200%;
+  }
+  to {
+    background-size: 100%; 
+  }
 }
-
-@-ms-keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@-ms-keyframes zoomHero {
+  from {
+    background-size: 200%;
+  }
+  to {
+    background-size: 100%; 
+  }
 }
 
 .myHero {
-    background-image: url("../../assets/parish-outside.jpeg");
+    background-image: url('/Users/clm/src/personal/st-marks-website-new/src/assets/parish-outside.jpeg');
     height: 100vh;
     background-size: cover;
     background-position-x: center;
@@ -145,8 +109,8 @@
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;
+    font-size: 75px;
     animation: slideIn 2s ease;
-    font-size: 4em;
   }
   
   .outline {
@@ -160,11 +124,10 @@
     margin-top: -1.5em;
     color: white;
     padding-left: 10px;
-    animation: fadeIn 2s normal forwards;
   }
 
-  @media only screen and (min-width:1060px) {
+  @media only screen and (min-width:1020px) {
     .myHero {
-      animation: scale-in 2s;
+      animation: zoomHero 2s ease;
     }
   }

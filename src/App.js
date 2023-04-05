@@ -8,15 +8,16 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <nav className="navbar bg-success py-2 fixed-top">
+        <nav className="navbar bg-diff py-2 fixed-top navbar-dark">
           <div className="container-fluid">
             <Link className="navbar-brand church-logo" to="/"><img src={logo} alt="church logo" /></Link>
+            <Link className="donate-button text-light d-none d-md-block" to="/donate">Donate</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="offcanvas offcanvas-end bg-success" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div className="offcanvas offcanvas-end bg-diff navbar-dark" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
               <div className="offcanvas-header">
-                <h5 className="offcanvas-title" id="offcanvasNavbarLabel">St. Mark Orthodox Church</h5>
+                <h5 className="offcanvas-title text-light" id="offcanvasNavbarLabel">St. Mark Orthodox Church</h5>
                 <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div className="offcanvas-body">
@@ -32,8 +33,8 @@ function App() {
                       About
                     </a>
                     <ul className="dropdown-menu nav-item">
-                      <li><a className="dropdown-item nav-link" href="/about">About</a></li>
-                      <li><a className="dropdown-item nav-link" href="/about/clergy">Clergy</a></li>
+                      <li><a className="dropdown-item nav-link text-dark" href="/about">About</a></li>
+                      <li><a className="dropdown-item nav-link text-dark" href="/about/clergy">Clergy</a></li>
                     </ul>
                   </li>
                   <li className="nav-item">
@@ -55,7 +56,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/about/clergy" element={<Clergy />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/calendar" element={<Calendar />} /> */}
+          {/* <Route path="/calendar" element={<Calendar />}/> */}
           {/* <Route path="/donate" element={<Donate />} /> */}
         </Routes>
       </BrowserRouter>

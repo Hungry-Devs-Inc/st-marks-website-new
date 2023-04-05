@@ -1,95 +1,87 @@
+@keyframes slideIn {
+  from {
+    transform: translateX(-250%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@-moz-keyframes slideIn {
+  from {
+    transform: translateX(-250%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    transform: translateX(-250%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@-o-keyframes slideIn {
+  from {
+    transform: translateX(-250%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@-ms-keyframes slideIn {
+  from {
+    transform: translateX(-250%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
 * {
     font-family: American Typewriter;
 }
 .church-logo img {
     height: 75px;
 }
-.bg-success {
-  opacity: .9;
-    background-color: #FFF8DC !important;
+.bg-diff {
+    background-color: #850A0A !important;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,.5);
   }
   .nav-link {
     font-family: American Typewriter !important;
+    font-size: 60px !important;
   }
 
   .nav-link:hover {
-    background-color: #3CB371;
+    background-color: #A70B0B;
     transition: 1s all ease;
     align-items:center;
   }
 
-  @keyframes slideIn {
-    from {
-      transform: translateX(0%);
-    }
-  
-    to {
-      transform: translateX(100%);
-    }
+  .link {
+    font-size: 2em;
   }
 
-  @-moz-keyframes slideIn {
-    from {
-      transform: translateX(0%);
-    }
-  
-    to {
-      transform: translateX(100%);
-    }
-  }
-  
-  @-webkit-keyframes slideIn {
-    from {
-      transform: translateX(0%);
-    }
-  
-    to {
-      transform: translateX(100%);
-    }
+  .donate-button {
+    background-color: #f1ba0a;
+    font-size: 35px;
+    text-decoration: none;
+    border:1px solid;
+    border-radius: 25px;
+    padding: 5px;
   }
 
-  @-o-keyframes slideIn {
-    from {
-      transform: translateX(0%);
-    }
-  
-    to {
-      transform: translateX(100%);
-    }
-  }
-
-  @-ms-keyframes slideIn {
-    from {
-      transform: translateX(0%);
-    }
-  
-    to {
-      transform: translateX(100%);
-    }
-  }
-  // fade in animation //
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-o-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+  .donate-button:hover {
+    background-color: #fedd00;
+    
   }

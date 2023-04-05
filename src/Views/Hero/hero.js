@@ -3,7 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./hero.css";
 
 const Hero = ({pageState}) => {
-
   return (
     <>
       <div className="myHero text-white">
