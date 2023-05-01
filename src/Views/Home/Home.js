@@ -1,15 +1,24 @@
 import { default as Hero } from "../Hero";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 import "./home.css"
+import saint from "../../assets/Subject.png";
+
 export const Home = () => {
+    const { ref: scrollRef, inView: imgInView } = useInView({triggerOnce: true});
     const [currentDate, setCurrentDate] = useState(new Date().toLocaleDateString());
     const [currentData, setCurrentData] = useState([]);
     // create logic to ping JSON file with relational date to scheduled services for the week
     // check currentDate against data
     // if currentData.date !== currentDate // swap out currentData
-    useEffect(() => {
-
-    }, [currentDate])
+    // useEffect(() => {
+    //     // const observer = new IntersectionObserver((entries) => {
+    //     //     const entry = entries[0];
+    //     //     imgInView(entry.isIntersecting);
+    //     // })
+    //     // observer.observe(scrollRef.current);
+    // }, [])
 
     const dummyData = [
         {
@@ -50,13 +59,14 @@ export const Home = () => {
     return (
         <>
             <Hero pageState={"Home"} />
-            <div className="bg-light">
-                <h1 className="date">{currentDate}</h1>
-                <div className="container-fluid row bg-light bg-gradient">
-                    <div className="col-sm-12 col-md-6">
-                        <img className="img-fluid" src="https://i.swncdn.com/media/630w/cms/CW/faith/31429-speaking-in-front-of-crowd-1200.webp" alt="Congregation" />
+            <div className="d-flex pt-5 top-container bg-light bg-gradient">
+                <div className="container-fluid d-flex justify-content-center row">
+                    <div className="col-sm-12 col-md-4">
+                        <img ref={scrollRef} className={`img-fluid home-body-image ${imgInView ? 'home-body-image-animation' : ''}`} src={saint} alt="saint"/>
                     </div>
-                    <div className="col-sm-12 col-md-6">
+                    <div className="divider d-none d-md-block col-md-2">
+                    </div>
+                    <div className="col-sm-12 col-md-4">
                         <h3 className="d-none d-md-block">Services</h3>
                         <h3>This Week at St. Mark</h3>
                         {dummyData.map(m => {
@@ -64,11 +74,11 @@ export const Home = () => {
                                 <>
                                     {m.data.map(data => {
                                         return (
-                                            <ul className="list-group list-group-numbered">
+                                            <ul className="list-group">
                                                 <li className="list-group-item d-flex justify-content-between align-items-start"
                                                 key={data.Title}>
                                                     <div className="ms-2 me-auto">
-                                                        <div class="fw-bold">{data.Title}</div>
+                                                        <div className="fw-bold">{data.Title}</div>
                                                         {data.Day} ( {data.TimeStart} - {data.TimeEnd} )
                                                     </div>
                                                     <span className="badge bg-primary rounded-pill">{data.Date}</span>
@@ -82,6 +92,8 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
+            {/* new container */}
+            <div className="container d-flex justify-content-center"></div>
         </>
     )
 }

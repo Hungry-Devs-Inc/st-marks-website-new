@@ -1,36 +1,25 @@
-let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.8,
-    
-  };
-//   const observer = new IntersectionObserver(entries => {
-//     // Loop over the entries
-//     entries.forEach(entry => {
-//       // If the element is visible
-//       if (entry.isIntersecting) {
-//         // Add the animation class
-//         entry.target.classList.add('home-body-image');
-//       }
-//     });
-//   });
-let observer = new IntersectionObserver(callback, options);
+export function detectScroll(classToCheck, classToAdd) {
+  let elements;
+  let windowHeight;
 
-  let target = document.querySelector(".home-body-image");
-    observer.observe(target);
+    function init() {
+      elements = document.querySelectorAll(classToCheck);
+      windowHeight = window.innerHeight;
+    }
 
-    let callback = (entries, observer) => {
-        entries.forEach((entry) => {
-          // Each entry describes an intersection change for one observed
-          // target element:
-          //   entry.boundingClientRect
-          //   entry.intersectionRatio
-          //   entry.intersectionRect
-          if (entry.isIntersecting) {
+    function checkPosition() {
+      for (let i=0; i < elements.length; i++) {
+        let element = elements[i];
+        let positionFromTop = element.getBoundingClientRect().top;
+         if (positionFromTop - windowHeight <= 0) {
+          element.classList.add(classToAdd);
+          element.classList.remove(classToCheck);
+         }
+      }
+    }
+    window.addEventListener("scroll", checkPosition);
+    window.addEventListener("resize", init);
 
-          }
-          //   entry.rootBounds
-          //   entry.target
-          //   entry.time
-        });
-      };
+    init();
+    checkPosition();
+}

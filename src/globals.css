@@ -57,9 +57,12 @@
     background-color: #850A0A !important;
     box-shadow: 0 10px 10px 0 rgba(0,0,0,.5);
   }
+  .offcanvas-title {
+    font-size: 35px !important;
+  }
   .nav-link {
     font-family: American Typewriter !important;
-    font-size: 60px !important;
+    font-size: 35px !important;
   }
 
   .nav-link:hover {
