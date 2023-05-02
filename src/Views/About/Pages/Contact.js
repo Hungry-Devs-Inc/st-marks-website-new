@@ -1,10 +1,9 @@
 import '../about.css';
-import { default as Hero } from '../../Hero';
+import '../../../globals.css';
 
 export const Contact = () => {
     return (
         <>
-            <Hero pageState={"Contact"} />
             <div className="container bg-light bg-gradient">
                 <div className="container-fluid">
                     <div className="row gap-3 justify-content-center pt-5">

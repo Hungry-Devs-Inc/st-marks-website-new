@@ -1,6 +1,6 @@
 import clergy from './clergy.json';
 import '../about.css';
-import { default as Hero } from '../../Hero';
+import { default as Hero } from '../../../components/Hero';
 
 export const Clergy = () => {
     return (

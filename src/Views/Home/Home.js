@@ -1,24 +1,27 @@
-import { default as Hero } from "../Hero";
+import { default as Hero } from "../../components/Hero";
 import { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import "./home.css"
 import saint from "../../assets/Subject.png";
+import patronSaintJesus from "../../assets/patron-jesus-christ.png";
 
 export const Home = () => {
-    const { ref: scrollRef, inView: imgInView } = useInView({triggerOnce: true});
+    // const { ref: scrollRef, inView: imgInView } = useInView();
     const [currentDate, setCurrentDate] = useState(new Date().toLocaleDateString());
     const [currentData, setCurrentData] = useState([]);
+    const [imgInView, setImgInView] = useState();
+    const scrollRef = useRef();
     // create logic to ping JSON file with relational date to scheduled services for the week
     // check currentDate against data
     // if currentData.date !== currentDate // swap out currentData
-    // useEffect(() => {
-    //     // const observer = new IntersectionObserver((entries) => {
-    //     //     const entry = entries[0];
-    //     //     imgInView(entry.isIntersecting);
-    //     // })
-    //     // observer.observe(scrollRef.current);
-    // }, [])
+    useEffect(() => {
+         const observer = new IntersectionObserver((entries) => {
+             const entry = entries[0];
+             setImgInView(entry.isIntersecting);
+         })
+         observer.observe(scrollRef.current);
+    }, [])
 
     const dummyData = [
         {
@@ -58,14 +61,13 @@ export const Home = () => {
 
     return (
         <>
-            <Hero pageState={"Home"} />
+        <Hero pageState={"Home"} />
             <div className="d-flex pt-5 top-container bg-light bg-gradient">
                 <div className="container-fluid d-flex justify-content-center row">
-                    <div className="col-sm-12 col-md-4">
-                        <img ref={scrollRef} className={`img-fluid home-body-image ${imgInView ? 'home-body-image-animation' : ''}`} src={saint} alt="saint"/>
+                    <div ref={scrollRef} className="col-sm-12 col-md-4">
+                        <img className={`img-fluid home-body-image ${imgInView ? 'home-body-image-animation' : 'hidden'}`} src={saint} alt="saint"/>
                     </div>
-                    <div className="divider d-none d-md-block col-md-2">
-                    </div>
+                    <div className="divider d-none d-md-block col-md-2"></div>
                     <div className="col-sm-12 col-md-4">
                         <h3 className="d-none d-md-block">Services</h3>
                         <h3>This Week at St. Mark</h3>
@@ -93,7 +95,21 @@ export const Home = () => {
                 </div>
             </div>
             {/* new container */}
-            <div className="container d-flex justify-content-center"></div>
+            <div className="mt-4 container d-flex justify-content-center">
+                <div className="container-fluid d-flex justify-content-center row">
+                    {/* image that displays on top same as image below  */}
+                    <div className="topRender-img-on-mobile col-sm-12 col-md-4 d-sm-block d-md-none">
+                        <img className={`img-fluid home-body-image `} src={patronSaintJesus} alt="patron-saint-jesus" />
+                    </div>
+                    <div className="col-sm-12 col-md-4">
+                            this is filler content should appear on the left
+                    </div>
+                    <div className="divider d-none d-md-block col-md-2"></div>
+                    <div className="col-sm-12 col-md-4 d-none d-md-block">
+                        <img className={`img-fluid home-body-image`} src={patronSaintJesus} alt="patron-saint-jesus" />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
