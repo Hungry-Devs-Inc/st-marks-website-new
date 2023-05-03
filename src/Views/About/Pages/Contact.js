@@ -1,9 +1,11 @@
 import '../about.css';
 import '../../../globals.css';
+import { PageTitle } from '../../../components/PageTitle'
 
 export const Contact = () => {
     return (
         <>
+            <PageTitle title="Contact" />
             <div className="container bg-light bg-gradient">
                 <div className="container-fluid">
                     <div className="row gap-3 justify-content-center pt-5">

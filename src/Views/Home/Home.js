@@ -1,4 +1,5 @@
 import { default as Hero } from "../../components/Hero";
+import { PageTitle } from '../../components/PageTitle'
 import { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -61,8 +62,8 @@ export const Home = () => {
 
     return (
         <>
-        <Hero pageState={"Home"} />
-            <div className="d-flex pt-5 top-container bg-light bg-gradient">
+        <Hero />
+            <div className="d-flex pt-5 bg-light bg-gradient">
                 <div className="container-fluid d-flex justify-content-center row">
                     <div ref={scrollRef} className="col-sm-12 col-md-4">
                         <img className={`img-fluid home-body-image ${imgInView ? 'home-body-image-animation' : 'hidden'}`} src={saint} alt="saint"/>
@@ -95,7 +96,7 @@ export const Home = () => {
                 </div>
             </div>
             {/* new container */}
-            <div className="mt-4 container d-flex justify-content-center">
+            <div className="pt-5 container d-flex justify-content-center">
                 <div className="container-fluid d-flex justify-content-center row">
                     {/* image that displays on top same as image below  */}
                     <div className="topRender-img-on-mobile col-sm-12 col-md-4 d-sm-block d-md-none">
