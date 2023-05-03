@@ -103,7 +103,10 @@ export const Home = () => {
                         <img className={`img-fluid home-body-image `} src={patronSaintJesus} alt="patron-saint-jesus" />
                     </div>
                     <div className="col-sm-12 col-md-4">
-                            this is filler content should appear on the left
+                            this is filler content should appear on the left. this is filler content should appear on the left.
+                            this is filler content should appear on the left. this is filler content should appear on the left.
+                            this is filler content should appear on the left. this is filler content should appear on the left.
+                            this is filler content should appear on the left. this is filler content should appear on the left.
                     </div>
                     <div className="divider d-none d-md-block col-md-2"></div>
                     <div className="col-sm-12 col-md-4 d-none d-md-block">

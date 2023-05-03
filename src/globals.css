@@ -50,6 +50,7 @@
 * {
     font-family: American Typewriter;
 }
+
 .church-logo img {
     height: 75px;
 }
@@ -90,5 +91,10 @@
   }
   
   .top-container {
-    margin-top: 75px;
+    margin-top: 25px;
+  }
+
+  .page-title {
+    padding-top: 85px;
+    background-color: #db0f27;
   }
