@@ -1,4 +1,4 @@
-import { About, Clergy, Contact, Home } from './Views';
+import { About, Clergy, Contact, Home, Faith } from './Views';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import logo from './assets/logo-1.png'
 import './globals.css';
@@ -56,6 +56,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/about/clergy" element={<Clergy />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/faith" element={<Faith />} />
           {/* <Route path="/calendar" element={<Calendar />}/> */}
           {/* <Route path="/donate" element={<Donate />} /> */}
         </Routes>

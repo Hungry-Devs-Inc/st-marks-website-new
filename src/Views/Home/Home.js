@@ -2,6 +2,7 @@ import { default as Hero } from "../../components/Hero";
 import { PageTitle } from '../../components/PageTitle'
 import { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom'
 
 import "./home.css"
 import saint from "../../assets/Subject.png";
@@ -127,7 +128,7 @@ export const Home = () => {
                          She also believes that there is nothing in the body of her teachings which is contrary to truth or which inhibits real union with God. The air of antiquity and timelessness which often characterizes Eastern Christianity is an expression of her desire to remain loyal to the authentic Christian Faith.
                          Orthodoxy believes that the Christian Faith and the Church are inseparable. It is impossible to know Christ, to share in the life of the Holy Trinity, or to be considered a Christian apart from the Church. It is in the Church that the Christian Faith is proclaimed and maintained. It is through the Church that an individual is nurtured in the Faith.
                         </p>
-                        <button className="button btn btn-primary">Read more</button>
+                        <Link to="/faith"><button className="button btn btn-primary">Read more</button></Link>
                         <h2 className="text-center">Worship</h2>
                         <p className="pb-2">
                         Worship unites God and man once again.
