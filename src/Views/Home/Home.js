@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import "./home.css"
 import saint from "../../assets/Subject.png";
 import patronSaintJesus from "../../assets/patron-jesus-christ.png";
+import square from "../../assets/square.jpeg";
 
 export const Home = () => {
     // const { ref: scrollRef, inView: imgInView } = useInView();
@@ -14,6 +15,7 @@ export const Home = () => {
     const [firstImage, firstImgInView] = useInView();
     const [secondImage, secondImgInView] = useInView();
     const [secondImageMobile, secondImgMobile] = useInView();
+    const [thirdImage, thirdImgView] = useInView();
     // create logic to ping JSON file with relational date to scheduled services for the week
     // check currentDate against data
     // if currentData.date !== currentDate // swap out currentData
@@ -57,13 +59,13 @@ export const Home = () => {
     return (
         <>
         <Hero />
-            <div className="d-flex pt-5 bg-light bg-gradient">
+            <div className="d-flex pt-5 pb-5 bg-light bg-gradient justify-content-center">
                 <div className="container-fluid d-flex justify-content-center row">
-                    <div ref={firstImage} className="col-sm-12 col-md-4">
+                    <div ref={firstImage} className="col-sm-12 col-md-4 pb-5">
                         <img className={`img-fluid home-body-image ${firstImgInView ? 'home-body-image-first' : 'hidden'}`} src={saint} alt="saint"/>
                     </div>
                     <div className="divider d-none d-md-block col-md-2"></div>
-                    <div className="col-sm-12 col-md-4">
+                    <div className="col-sm-12 col-md-4 justify-content-center">
                         <h3 className="d-none d-md-block">Services</h3>
                         <h3>This Week at St. Mark</h3>
                         {dummyData.map(m => {
@@ -86,6 +88,8 @@ export const Home = () => {
                                 </>
                             )
                         })}
+                        <p className="pt-5">this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left.</p>
+                        <p className="pt-5">this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left.</p>
                     </div>
                 </div>
             </div>
@@ -93,14 +97,17 @@ export const Home = () => {
             <div className="pt-5 container d-flex justify-content-center">
                 <div className="container-fluid d-flex justify-content-center row">
                     {/* image that displays on top same as image below  */}
-                    <div ref={secondImageMobile} className="topRender-img-on-mobile col-sm-12 col-md-4 d-sm-block d-md-none">
-                        <img className={`img-fluid home-body-image ${secondImgMobile ? 'home-body-image-second' : 'hidden'}`} src={patronSaintJesus} alt="patron-saint-jesus" />
+                    <div ref={secondImageMobile} className="topRender-img-on-mobile col-sm-12 col-md-4 d-sm-block d-md-none pb-5">
+                        <img className={`img-fluid home-body-image  ${secondImgMobile ? 'home-body-image-second' : 'hidden'}`} src={patronSaintJesus} alt="patron-saint-jesus" />
                     </div>
                     <div className="col-sm-12 col-md-4">
                             this is filler content should appear on the left. this is filler content should appear on the left.
                             this is filler content should appear on the left. this is filler content should appear on the left.
                             this is filler content should appear on the left. this is filler content should appear on the left.
                             this is filler content should appear on the left. this is filler content should appear on the left.
+                        <p className="pt-5">this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left.</p>
+                        <p className="pt-5">this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left. this is filler content should appear on the left.</p>
+
                     </div>
                     <div className="divider d-none d-md-block col-md-2"></div>
                     <div ref={secondImage} className="col-sm-12 col-md-4 d-none d-md-block">
@@ -108,8 +115,21 @@ export const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="pt-5 container d-flex justify-content-center">
-                    
+            <div className="pt-5 pb-5 container-fluid d-flex justify-content-center bg-light bg-gradient">
+                <div className="row">
+                    <div ref={thirdImage} className="col-sm-12 col-md-6 pb-3">
+                        <img src={square} className={`img-fluid home-body-image  ${thirdImgView ? 'home-body-image-first' : 'hidden'}`} alt="christ"/>
+                    </div>
+                    <div className="col-sm-12 col-md-6">
+                    <h2 className="text-center">Faith</h2>
+                        <p className="pb-3">The Orthodox Church throughout the ages has maintained a continuity of faith and love with the apostolic community which was founded by Christ and sustained by the Holy Spirit.
+                         Orthodoxy believes that she has preserved and taught the historic Christian Faith, free from error and distortion, from the time of the Apostles.
+                         She also believes that there is nothing in the body of her teachings which is contrary to truth or which inhibits real union with God. The air of antiquity and timelessness which often characterizes Eastern Christianity is an expression of her desire to remain loyal to the authentic Christian Faith.
+                         Orthodoxy believes that the Christian Faith and the Church are inseparable. It is impossible to know Christ, to share in the life of the Holy Trinity, or to be considered a Christian apart from the Church. It is in the Church that the Christian Faith is proclaimed and maintained. It is through the Church that an individual is nurtured in the Faith.
+                        </p>
+                        <button className="button btn btn-primary">Read more</button>
+                    </div>
+                </div>
             </div>
         </>
     )

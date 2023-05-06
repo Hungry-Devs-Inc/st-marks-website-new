@@ -105,8 +105,8 @@
 .home-body-image {
     border: 5px solid #F2C649;
     border-radius: 15px;
+    box-shadow:5px 10px 20px black;
 }
-
 .hidden {
   opacity: 0;
 }
