@@ -11,18 +11,12 @@ export const Home = () => {
     // const { ref: scrollRef, inView: imgInView } = useInView();
     const [currentDate, setCurrentDate] = useState(new Date().toLocaleDateString());
     const [currentData, setCurrentData] = useState([]);
-    const [imgInView, setImgInView] = useState();
-    const scrollRef = useRef();
+    const [firstImage, firstImgInView] = useInView();
+    const [secondImage, secondImgInView] = useInView();
+    const [secondImageMobile, secondImgMobile] = useInView();
     // create logic to ping JSON file with relational date to scheduled services for the week
     // check currentDate against data
     // if currentData.date !== currentDate // swap out currentData
-    useEffect(() => {
-         const observer = new IntersectionObserver((entries) => {
-             const entry = entries[0];
-             setImgInView(entry.isIntersecting);
-         })
-         observer.observe(scrollRef.current);
-    }, [])
 
     const dummyData = [
         {
@@ -65,8 +59,8 @@ export const Home = () => {
         <Hero />
             <div className="d-flex pt-5 bg-light bg-gradient">
                 <div className="container-fluid d-flex justify-content-center row">
-                    <div ref={scrollRef} className="col-sm-12 col-md-4">
-                        <img className={`img-fluid home-body-image ${imgInView ? 'home-body-image-animation' : 'hidden'}`} src={saint} alt="saint"/>
+                    <div ref={firstImage} className="col-sm-12 col-md-4">
+                        <img className={`img-fluid home-body-image ${firstImgInView ? 'home-body-image-first' : 'hidden'}`} src={saint} alt="saint"/>
                     </div>
                     <div className="divider d-none d-md-block col-md-2"></div>
                     <div className="col-sm-12 col-md-4">
@@ -99,8 +93,8 @@ export const Home = () => {
             <div className="pt-5 container d-flex justify-content-center">
                 <div className="container-fluid d-flex justify-content-center row">
                     {/* image that displays on top same as image below  */}
-                    <div className="topRender-img-on-mobile col-sm-12 col-md-4 d-sm-block d-md-none">
-                        <img className={`img-fluid home-body-image `} src={patronSaintJesus} alt="patron-saint-jesus" />
+                    <div ref={secondImageMobile} className="topRender-img-on-mobile col-sm-12 col-md-4 d-sm-block d-md-none">
+                        <img className={`img-fluid home-body-image ${secondImgMobile ? 'home-body-image-second' : 'hidden'}`} src={patronSaintJesus} alt="patron-saint-jesus" />
                     </div>
                     <div className="col-sm-12 col-md-4">
                             this is filler content should appear on the left. this is filler content should appear on the left.
@@ -109,10 +103,13 @@ export const Home = () => {
                             this is filler content should appear on the left. this is filler content should appear on the left.
                     </div>
                     <div className="divider d-none d-md-block col-md-2"></div>
-                    <div className="col-sm-12 col-md-4 d-none d-md-block">
-                        <img className={`img-fluid home-body-image`} src={patronSaintJesus} alt="patron-saint-jesus" />
+                    <div ref={secondImage} className="col-sm-12 col-md-4 d-none d-md-block">
+                        <img className={`img-fluid home-body-image ${secondImgInView ? 'home-body-image-second' : 'hidden'}`} src={patronSaintJesus} alt="patron-saint-jesus" />
                     </div>
                 </div>
+            </div>
+            <div className="pt-5 container d-flex justify-content-center">
+                    
             </div>
         </>
     )
