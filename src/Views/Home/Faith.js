@@ -1,4 +1,5 @@
-import { PageTitle } from '../../components/PageTitle'
+import { PageTitle } from '../../components/PageTitle';
+import "./home.css";
 
 export const Faith = () => {
     return (
@@ -108,7 +109,7 @@ export const Faith = () => {
             For generations, the Creed has been the criterion of authentic Faith and the basis of Christian education. 
             The Creed is recited at the time of Baptism and during every Divine Liturgy.
             </p>
-            <blockquote>
+            <blockquote className='prayerQuote'>
             "We believe in one God, the Father Almighty, Maker of heaven and earth, and of all things visible and invisible.
              And in one Lord Jesus Christ, the Son of God, the only-begotten, begotten of the Father before all ages.
               Light of Light; true God of true God; begotten, not made; of one essence with the Father, by whom all things 
@@ -121,7 +122,8 @@ export const Faith = () => {
                who spake by the prophets. And I believe In one Holy, Catholic, and Apostolic Church. 
                I acknowledge one baptism for the remission of sins. I look for the resurrection of the dead, 
                and the life of the world to come. Amen."
-            The Nicene-Constantinopolitan Creed according to the use of the Greek Orthodox Church of Antioch
+               <hr/>
+            -The Nicene-Constantinopolitan Creed according to the use of the Greek Orthodox Church of Antioch
             </blockquote>
         </div>
         </>

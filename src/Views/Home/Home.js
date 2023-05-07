@@ -139,7 +139,7 @@ export const Home = () => {
                          Salvation may be understood as the growth of the human person from the former categories to the latter – from the old, the dead, the profane, and the shadows, to the new, the life, the sacred, and the light.
                           This journey of salvation is presented to us in profound ways in the style and forms of ancient Christian worship.
                         </p>
-                        <button className="button btn btn-primary">Read more</button>
+                        <Link to="/worship"><button className="button btn btn-primary">Read more</button></Link>
                         <h2 className="text-center">Fellowship</h2>
                         <p className="pb-2">
                         By engaging our brothers and sisters, we grow closer to God!
@@ -150,10 +150,10 @@ export const Home = () => {
                           We are in Him and He is in us.
                            But we are never totally conscious of just how He is there, and what are His motivations for our lives.
                         </p>
-                        <button className="button btn btn-primary">Read more</button>
+                        <Link to="/fellowship"><button className="button btn btn-primary">Read more</button></Link>
                     </div>
                 </div>
             </div>
-        </>
+         </>
     )
 }

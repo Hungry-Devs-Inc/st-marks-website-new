@@ -1,2 +1,2 @@
 export { About, Clergy, Contact } from './About';
-export { Home, Faith } from "./Home"
+export { Home, Faith, Worship, Fellowship } from "./Home"
